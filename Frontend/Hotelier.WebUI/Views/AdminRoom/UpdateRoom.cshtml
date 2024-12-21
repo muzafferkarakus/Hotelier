@@ -1,0 +1,34 @@
+﻿@model UpdateRoomDto
+@{
+    ViewData["Title"] = "UpdateRoom";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+<form method="post">
+    <label>Oda Numarası</label>
+    <input type="hidden" asp-for="RoomId" />
+    <input type="text" class="form-control" asp-for="RoomNumber" />
+    <br />
+    <label>Başlık</label>
+    <input type="text" class="form-control" asp-for="Title" />
+    <br />
+    <label>Görsel</label>
+    <input type="text" class="form-control" asp-for="CoverImage" />
+    <br />
+    <label>Yatak Sayısı</label>
+    <input type="text" class="form-control" asp-for="BedCount" />
+    <br />
+    <label>Banyo Sayısı</label>
+    <input type="text" class="form-control" asp-for="BathCount" />
+    <br />
+    <label>İnternet</label>
+    <input type="text" class="form-control" asp-for="WiFi" />
+    <br />
+    <label>Fiyat</label>
+    <input type="text" class="form-control" asp-for="Price" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" class="form-control" asp-for="Description" />
+    <br />
+    <button class="btn mb-1 btn-rounded btn-outline-primary">Güncelle</button>
+</form>
+

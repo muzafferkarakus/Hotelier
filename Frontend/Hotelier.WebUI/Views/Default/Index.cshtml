@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+@await Component.InvokeAsync("_DefaultHeadViewComponentPartial")
+<body>
+    <div class="container-xxxl bg-white p-0">
+        @await Component.InvokeAsync("_DefaultHeaderViewComponentPartial")
+        @await Component.InvokeAsync("_DefaultCarouselViewComponentPartial")
+        @await Component.InvokeAsync("_DefaultBookingViewComponentPartial")
+        @await Component.InvokeAsync("_DefaultAboutViewComponentPartial")
+        @await Component.InvokeAsync("_DefaultRoomViewComponentPartial")
+        @await Component.InvokeAsync("_DefaultVideoViewComponentPartial")
+        @await Component.InvokeAsync("_DefaultServiceViewComponentPartial")
+        @await Component.InvokeAsync("_DefaultTestimonialViewComponentPartial")
+        @await Component.InvokeAsync("_DefaultTeamViewComponentPartial")
+        @await Html.PartialAsync("_DefaultSubscribeViewComponentPartial")
+        @await Component.InvokeAsync("_DefaultFooterViewComponentPartial")
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+    @await Component.InvokeAsync("_DefaultScriptsViewComponentPartial")
+</body>
+</html>
