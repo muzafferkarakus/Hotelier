@@ -1,4 +1,5 @@
-﻿using Hotelier.DtoLayer.Dtos.StaffDtos;
+﻿
+using Hotelier.WebUI.Dtos.StaffDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;

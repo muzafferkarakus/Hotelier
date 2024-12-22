@@ -443,7 +443,7 @@ var DateTimePicker = function ($, moment) {
 
             if (this._isValid(targetMoment)) {
                 this._dates[index] = targetMoment;
-                this._datesFormatted[index] = targetMoment.format('YYYY-MM-DD');
+                this._datesFormatted[index] = targetMoment.format('DD-MM-YYYY');
                 this._viewDate = targetMoment.clone();
                 if (this._options.allowMultidate && this._dates.length > 1) {
                     for (var i = 0; i < this._dates.length; i++) {
@@ -589,11 +589,11 @@ var DateTimePicker = function ($, moment) {
         };
 
         DateTimePicker.prototype._isInDisabledDates = function _isInDisabledDates(testDate) {
-            return this._options.disabledDates[testDate.format('YYYY-MM-DD')] === true;
+            return this._options.disabledDates[testDate.format('DD-MM-YYYY')] === true;
         };
 
         DateTimePicker.prototype._isInEnabledDates = function _isInEnabledDates(testDate) {
-            return this._options.enabledDates[testDate.format('YYYY-MM-DD')] === true;
+            return this._options.enabledDates[testDate.format('DD-MM-YYYY')] === true;
         };
 
         DateTimePicker.prototype._isInDisabledHours = function _isInDisabledHours(testDate) {
@@ -726,7 +726,7 @@ var DateTimePicker = function ($, moment) {
             $.each(givenDatesArray, function () {
                 var dDate = self._parseInputDate(this);
                 if (dDate.isValid()) {
-                    givenDatesIndexed[dDate.format('YYYY-MM-DD')] = true;
+                    givenDatesIndexed[dDate.format('DD-MM-YYYY')] = true;
                 }
             });
             return Object.keys(givenDatesIndexed).length ? givenDatesIndexed : false;
@@ -2087,7 +2087,7 @@ var TempusDominusBootstrap4 = function ($) {
                     clsName += ' new';
                 }
                 if (this._options.allowMultidate) {
-                    var index = this._datesFormatted.indexOf(currentDate.format('YYYY-MM-DD'));
+                    var index = this._datesFormatted.indexOf(currentDate.format('DD-MM-YYYY'));
                     if (index !== -1) {
                         if (currentDate.isSame(this._datesFormatted[index], 'd') && !this.unset) {
                             clsName += ' active';
@@ -2289,7 +2289,7 @@ var TempusDominusBootstrap4 = function ($) {
                         var selectDate = day.date(parseInt($(e.target).text(), 10)),
                             index = 0;
                         if (this._options.allowMultidate) {
-                            index = this._datesFormatted.indexOf(selectDate.format('YYYY-MM-DD'));
+                            index = this._datesFormatted.indexOf(selectDate.format('DD-MM-YYYY'));
                             if (index !== -1) {
                                 this._setValue(null, index); //deselect multidate
                             } else {

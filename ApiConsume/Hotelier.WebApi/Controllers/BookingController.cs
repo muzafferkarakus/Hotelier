@@ -64,5 +64,27 @@ namespace Hotelier.WebApi.Controllers
             var values = _bookingService.TGetById(id);
             return Ok(values);
         }
+        [HttpGet("BookingStatusChangeApproved/{id}")]
+        public IActionResult BookingStatusChangeApproved(int id)
+        {
+            _bookingService.TBookingStatusChangeApproved(id);
+            return Ok();
+        }
+
+        [HttpGet("BookingStatusChangeCancel/{id}")]
+        public IActionResult BookingStatusChangeCancel(int id)
+        {
+            _bookingService.TBookingStatusChangeCancel(id);
+            return Ok();
+        }
+
+        [HttpGet("BookingStatusChangeWaiting/{id}")]
+        public IActionResult BookingStatusChangeWaiting(int id)
+        {
+            _bookingService.TBookingStatusChangeWaiting(id);
+            return Ok();
+        }
     }
 }
+
+

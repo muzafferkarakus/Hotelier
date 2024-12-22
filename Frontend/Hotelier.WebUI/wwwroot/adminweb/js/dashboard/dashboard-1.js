@@ -458,7 +458,7 @@ Pignose Calender
     $(".year-calendar").pignoseCalendar({
         theme: "blue"
     }), $("input.calendar").pignoseCalendar({
-        format: "YYYY-MM-DD"
+        format: "DD-MM-YYYY"
     });
 
 })(jQuery);

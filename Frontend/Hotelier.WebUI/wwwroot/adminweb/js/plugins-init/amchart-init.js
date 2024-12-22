@@ -6,7 +6,7 @@ $(document).ready(function () {
     var chart = AmCharts.makeChart("combined-bullet", {
         "type": "serial",
         "theme": "dark",
-        "dataDateFormat": "YYYY-MM-DD",
+        "dataDateFormat": "DD-MM-YYYY",
         "precision": 2,
         "color": "#FFFFFF",
         "valueAxes": [{
@@ -331,7 +331,7 @@ $(document).ready(function () {
         "type": "serial",
         "theme": "dark",
 
-        "dataDateFormat": "YYYY-MM-DD",
+        "dataDateFormat": "DD-MM-YYYY",
         "dataProvider": chartData,
 
         "addClassNames": true,
@@ -670,7 +670,7 @@ $(document).ready(function () {
         "marginRight": 40,
         "marginLeft": 40,
         "autoMarginOffset": 20,
-        "dataDateFormat": "YYYY-MM-DD",
+        "dataDateFormat": "DD-MM-YYYY",
         "valueAxes": [{
             "id": "v1",
             "axisAlpha": 0,
@@ -1295,7 +1295,7 @@ $(document).ready(function () {
         "type": "serial",
         "theme": "dark",
         "color": "#FFFFFF",
-        "dataDateFormat": "YYYY-MM-DD",
+        "dataDateFormat": "DD-MM-YYYY",
         "valueAxes": [{
             "position": "left"
         }],
@@ -2255,7 +2255,7 @@ $(document).ready(function () {
                 "useColumnNames": true
             }
         }],
-        "dataDateFormat": "YYYY-MM-DD",
+        "dataDateFormat": "DD-MM-YYYY",
 
         "panels": [{
             "title": "Value",
