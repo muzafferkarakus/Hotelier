@@ -2,6 +2,8 @@
 using Hotelier.EntityLayer.Concrate;
 using Hotelier.WebUI.Dtos.AboutDtos;
 using Hotelier.WebUI.Dtos.BookingDtos;
+using Hotelier.WebUI.Dtos.ContactDtos;
+using Hotelier.WebUI.Dtos.GuestDtos;
 using Hotelier.WebUI.Dtos.LoginDto;
 using Hotelier.WebUI.Dtos.RegisterDtos;
 using Hotelier.WebUI.Dtos.RoomDtos;
@@ -30,6 +32,14 @@ namespace Hotelier.WebUI.Mapping
             CreateMap<UpdateBookingDto, Booking>().ReverseMap();
             CreateMap<CreateBookingDto, Booking>().ReverseMap();
             CreateMap<ApprovedReservationDto, Booking>().ReverseMap();
+
+            CreateMap<ResultContactDto, Contact>().ReverseMap();
+            CreateMap<UpdateContactDto, Contact>().ReverseMap();
+            CreateMap<CreateContactDto, Contact>().ReverseMap();
+
+            CreateMap<ResultGuestDto, Guest>().ReverseMap();
+            CreateMap<UpdateGuestDto, Guest>().ReverseMap();
+            CreateMap<CreateGuestDto, Guest>().ReverseMap();
 
             CreateMap<CreateSubscribeDto, Subscribe>().ReverseMap();
 

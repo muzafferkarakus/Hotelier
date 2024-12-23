@@ -1,4 +1,4 @@
-﻿using Hotelier.DtoLayer.Dtos.TestimonialDtos;
+﻿using Hotelier.WebUI.Dtos.TestimonialDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;

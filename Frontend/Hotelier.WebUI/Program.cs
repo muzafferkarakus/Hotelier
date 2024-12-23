@@ -1,5 +1,9 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Hotelier.DataAccessLayer.Concrete;
 using Hotelier.EntityLayer.Concrate;
+using Hotelier.WebUI.Dtos.GuestDtos;
+using Hotelier.WebUI.ValidationRules.GuestValidationRules;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +12,9 @@ builder.Services.AddDbContext<Context>();
 builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
 builder.Services.AddHttpClient();
 
-builder.Services.AddControllersWithViews();
+//builder.Services.AddTransient<IValidator<CreateGuestDto>, CreateGuestValidator>();
+builder.Services.AddControllersWithViews().AddFluentValidation();
+
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 
