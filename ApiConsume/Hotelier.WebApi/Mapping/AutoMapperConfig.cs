@@ -7,6 +7,7 @@ using Hotelier.DtoLayer.Dtos.RoomDtos;
 using Hotelier.DtoLayer.Dtos.SendMessageDtos;
 using Hotelier.DtoLayer.Dtos.SubscribeDtos;
 using Hotelier.DtoLayer.Dtos.TestimonialDtos;
+using Hotelier.DtoLayer.Dtos.WorkLocationDtos;
 using Hotelier.EntityLayer.Concrate;
 
 namespace Hotelier.WebApi.Mapping
@@ -42,6 +43,10 @@ namespace Hotelier.WebApi.Mapping
             CreateMap<ResultSendMessageDto, SendMessage>().ReverseMap();
             CreateMap<UpdateSendMessageDto, SendMessage>().ReverseMap();
             CreateMap<CreateSendMessageDto, SendMessage>().ReverseMap();
+
+            CreateMap<ResultWorkLocationDto, WorkLocation>().ReverseMap();
+            CreateMap<UpdateWorkLocationDto, WorkLocation>().ReverseMap();
+            CreateMap<CreateWorkLocationDto, WorkLocation>().ReverseMap();
 
             CreateMap<CreateSubscribeDto, Subscribe>().ReverseMap();
         }

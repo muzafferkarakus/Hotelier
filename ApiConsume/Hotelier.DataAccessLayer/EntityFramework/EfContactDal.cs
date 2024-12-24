@@ -10,5 +10,12 @@ namespace Hotelier.DataAccessLayer.EntityFramework
         public EfContactDal(Context context) : base(context)
         {
         }
+
+        public int GetContactCount()
+        {
+            var context = new Context();
+            var values = context.Contacts.Count();
+            return values;
+        }
     }
 }

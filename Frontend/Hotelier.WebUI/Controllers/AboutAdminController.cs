@@ -65,5 +65,6 @@ namespace Hotelier.WebUI.Controllers
             }
             return View();
         }
+
     }
 }

@@ -63,11 +63,14 @@ namespace Hotelier.WebApi.Controllers
             var values = _contactService.TGetById(id);
             return Ok(values);
         }
-        //[HttpGet]
-        //public IActionResult InboxListContact()
-        //{
-        //    var values = _contactService.TGetList();
-        //    return Ok(values);
-        //}
+        [HttpGet("GetContactCount")]
+        public IActionResult GetContactCount()
+        {
+            return Ok(_contactService.TGetContactCount());
+        }
     }
 }
+
+
+//http://localhost:5148/api/Contact/GetContactCount
+//http://localhost:5148/api/SendMessage/GetSendMessageCount

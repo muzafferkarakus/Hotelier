@@ -43,6 +43,9 @@ builder.Services.AddScoped<IGuestDal, EfGuestDal>();
 builder.Services.AddScoped<ISendMessageService, SendMessageManager>();
 builder.Services.AddScoped<ISendMessageDal, EfSendMessageDal>();
 
+builder.Services.AddScoped<IWorkLocationService, WorkLocationManager>();
+builder.Services.AddScoped<IWorkLocationDal, EfWorkLocationDal>();
+
 builder.Services.AddCors(opt =>
 {
     opt.AddPolicy("HotelierApiCors", opts =>

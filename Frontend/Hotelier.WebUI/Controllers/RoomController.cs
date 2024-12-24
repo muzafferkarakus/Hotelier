@@ -1,11 +1,9 @@
-﻿using Hotelier.WebUI.Dtos.RoomDtos;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using System.Net.Http;
-using System.Runtime.InteropServices;
 
 namespace Hotelier.WebUI.Controllers
 {
+    [AllowAnonymous]
     public class RoomController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;

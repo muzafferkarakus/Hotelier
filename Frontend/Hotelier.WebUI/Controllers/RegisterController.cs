@@ -1,10 +1,12 @@
 ﻿using Hotelier.EntityLayer.Concrate;
 using Hotelier.WebUI.Dtos.RegisterDtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hotelier.WebUI.Controllers
 {
+    [AllowAnonymous]
     public class RegisterController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
@@ -32,7 +34,8 @@ namespace Hotelier.WebUI.Controllers
                 Name = createNewUserDto.Name,
                 Surname = createNewUserDto.Surname,
                 UserName = createNewUserDto.Username,
-                Email = createNewUserDto.Mail
+                Email = createNewUserDto.Mail,
+                WorkLocationId = 1
             };
             var result = await _userManager.CreateAsync(appUser, createNewUserDto.Password);
             if (result.Succeeded)

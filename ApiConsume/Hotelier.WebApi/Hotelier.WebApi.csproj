@@ -30,4 +30,9 @@
     <ProjectReference Include="..\Hotelier.EntityLayer\Hotelier.EntityLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="files\" />
+  </ItemGroup>
+
 </Project>
