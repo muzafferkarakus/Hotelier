@@ -36,5 +36,19 @@ namespace Hotelier.DataAccessLayer.EntityFramework
             values.Status = "Beklemeye Alındı";
             context.SaveChanges();
         }
+
+        public int GetBookingCount()
+        {
+            var context = new Context();
+            var values = context.Bookings.Count();
+            return values;
+        }
+
+        public List<Booking> Last6BookingList()
+        {
+            var context = new Context();
+            var values = context.Bookings.OrderByDescending(x => x.BookingId).Take(6).ToList();
+            return values;
+        }
     }
 }

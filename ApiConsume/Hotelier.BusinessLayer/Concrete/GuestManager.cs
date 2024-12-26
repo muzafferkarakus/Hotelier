@@ -28,6 +28,11 @@ namespace Hotelier.BusinessLayer.Concrete
             return _guestDal.GetList();
         }
 
+        public int TGuestCount()
+        {
+            return _guestDal.GuestCount();
+        }
+
         public void TInsert(Guest t)
         {
             _guestDal.Insert(t);

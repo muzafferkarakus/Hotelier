@@ -2,7 +2,8 @@
 
 namespace Hotelier.DataAccessLayer.Abstract
 {
-    public interface IGuestDal: IGenericDal<Guest>
+    public interface IGuestDal : IGenericDal<Guest>
     {
+        int GuestCount();
     }
 }

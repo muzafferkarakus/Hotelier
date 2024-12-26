@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Hotelier.EntityLayer.Concrate;
 using Hotelier.WebUI.Dtos.AboutDtos;
+using Hotelier.WebUI.Dtos.AppUserDtos;
 using Hotelier.WebUI.Dtos.BookingDtos;
 using Hotelier.WebUI.Dtos.ContactDtos;
 using Hotelier.WebUI.Dtos.GuestDtos;
@@ -45,6 +46,7 @@ namespace Hotelier.WebUI.Mapping
 
             CreateMap<CreateNewUserDto, AppUser>().ReverseMap();
             CreateMap<LoginUserDto, AppUser>().ReverseMap();
+            CreateMap<ResultAssignRoleDto, AppUser>().ReverseMap();
         }
     }
 }

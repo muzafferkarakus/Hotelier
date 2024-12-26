@@ -84,6 +84,13 @@ namespace Hotelier.WebApi.Controllers
             _bookingService.TBookingStatusChangeWaiting(id);
             return Ok();
         }
+
+        [HttpGet("Last6BookingList")]
+        public IActionResult Last6BookingList()
+        {
+            var values = _bookingService.TLast6BookingList();
+            return Ok(values);
+        }
     }
 }
 

@@ -46,6 +46,9 @@ builder.Services.AddScoped<ISendMessageDal, EfSendMessageDal>();
 builder.Services.AddScoped<IWorkLocationService, WorkLocationManager>();
 builder.Services.AddScoped<IWorkLocationDal, EfWorkLocationDal>();
 
+builder.Services.AddScoped<IAppUserService, AppUserManager>();
+builder.Services.AddScoped<IAppUserDal, EfAppUserDal>();
+
 builder.Services.AddCors(opt =>
 {
     opt.AddPolicy("HotelierApiCors", opts =>
@@ -56,7 +59,9 @@ builder.Services.AddCors(opt =>
     });
 });
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

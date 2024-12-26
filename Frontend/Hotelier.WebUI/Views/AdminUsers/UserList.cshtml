@@ -1,0 +1,63 @@
+﻿@model List<ResultAppUserListDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+<table class="table table-xs mb-0">
+    <thead>
+        <tr>
+            <th>Ad Soyad</th>
+            <th>E-Posta</th>
+            <th>Progress</th>
+            <th>Ülke</th>
+            <th>İl</th>
+            <th>İlçe</th>
+            <th>Cinsiyet</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><img src="@item.ImageUrl" class=" rounded-circle mr-3" alt=""><span>@item.Name @item.Surname</span></td>
+                <td>@item.Email</td>
+                <td>
+                    @if (item.Gender == "Erkek")
+                    {
+                        <div>
+                            <div class="progress" style="height: 6px">
+                                <div class="progress-bar bg-success" style="width: 77%"></div>
+                            </div>
+                        </div>
+                    }
+                    @if (item.Gender == "Kadın")
+                    {
+                        <div>
+                            <div class="progress" style="height: 6px">
+                                <div class="progress-bar bg-primary" style="width: 77%"></div>
+                            </div>
+                        </div>
+                    }
+                </td>
+                <td>@item.Country</td>
+                <td>@item.City</td>
+                <td><span>@item.District</span></td>
+
+                @if (item.Gender == "Erkek")
+                {
+                    <td><i class="fa fa-circle-o text-info  mr-2"></i>@item.Gender </td>
+                }
+                @if (item.Gender == "Kadın")
+                {
+                    <td><i class="fa fa-circle-o text-danger  mr-2"></i>@item.Gender</td>
+                }
+
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<br />
+<a href="/Register/Index/" class="btn btn-primary">Yeni Kullanıcı</a>
+
+

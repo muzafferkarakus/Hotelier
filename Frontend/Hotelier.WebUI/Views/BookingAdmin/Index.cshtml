@@ -19,6 +19,10 @@
                             <th>Giriş Tarihi</th>
                             <th>Çıkış Tarihi</th>
                             <th>Durum</th>
+                            <th>Onayla</th>
+                            <th>İptal Et</th>
+                            <th>Beklet</th>
+                            <th>Güncelle</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,6 +38,7 @@
                                 <td><a href="/BookingAdmin/ApprovedReservation/@item.BookingId" class="btn mb-1 btn-rounded btn-outline-primary">Onayla</a></td>
                                 <td><a href="/BookingAdmin/BookingStatusChangeCancel/@item.BookingId" class="btn mb-1 btn-rounded btn-outline-danger">İptal Et</a></td>
                                 <td><a href="/BookingAdmin/BookingStatusChangeWaiting/@item.BookingId" class="btn mb-1 btn-rounded btn-outline-warning">Beklet</a></td>
+                                <td><a href="/BookingAdmin/UpdateBooking/@item.BookingId" class="btn mb-1 btn-rounded btn-outline-primary">Güncelle</a></td>
                             </tr>
                         }
                     </tbody>

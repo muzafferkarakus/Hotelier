@@ -30,7 +30,7 @@ namespace Hotelier.WebUI.Controllers
                 var result = await _signInManager.PasswordSignInAsync(loginUserDto.Username, loginUserDto.Password, false, false);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Room");
+                    return RedirectToAction("Index", "Dashboard");
                 }
                 else
                 {

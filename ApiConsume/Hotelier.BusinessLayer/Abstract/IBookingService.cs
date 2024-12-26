@@ -7,5 +7,7 @@ namespace Hotelier.BusinessLayer.Abstract
         void TBookingStatusChangeApproved(int id);
         void TBookingStatusChangeCancel(int id);
         void TBookingStatusChangeWaiting(int id);
+        int TGetBookingCount();
+        List<Booking> TLast6BookingList();
     }
 }
