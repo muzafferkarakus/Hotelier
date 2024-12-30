@@ -37,6 +37,15 @@ Swagger: API dökümantasyonu ve test süreçleri için kullanılan modern bir a
 
 Postman: API'nin test edilmesi ve entegrasyon süreçlerinde kullanılan bir geliştirme aracı.
 
+Proje Amacı
+-
+Bu projenin temel amacı, modern yazılım geliştirme tekniklerini kullanarak, ölçeklenebilir, güvenli ve kullanıcı dostu bir sistem geliştirmektir. 
+Geliştirilen altyapı, hem teknik gereksinimleri karşılamakta hem de kullanıcı deneyimini üst düzeye çıkarmaktadır.
+
+Sonuç
+-
+Proje, güncel teknolojiler ve modern yazılım geliştirme prensipleri doğrultusunda başarıyla tamamlanmıştır. 
+Esnek mimarisi, güçlü API altyapısı ve güvenli kullanıcı yönetimi özellikleri ile genişletilebilir ve sürdürülebilir bir sistem sunmaktadır.
 
 Projeden Bazı Ekran Görüntüleri
 -
